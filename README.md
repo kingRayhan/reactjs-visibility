@@ -88,7 +88,7 @@ const App = () => {
 };
 ```
 
-### Detech visibility with `<Observer>` component
+### Detech visibility with `<VisibilityObserver>` component
 
 ```jsx
 import React from "react";
