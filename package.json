@@ -21,7 +21,7 @@
 		"email": "md.raihan095@northsouth.edu",
 		"url": "https://www.github.com/kingrayhan"
 	},
-	"repository": "codifytools/react-npm-package-boilerplate",
+	"repository": "kingRayhan/react-onscreen",
 	"license": "MIT",
 	"peerDependencies": {
 		"react": ">=16.8.0",
