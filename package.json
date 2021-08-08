@@ -1,6 +1,6 @@
 {
-	"name": "@rayhan/react-onscreen",
-	"version": "0.0.2",
+	"name": "reactjs-onscreen",
+	"version": "0.0.3",
 	"description": "Detect when an element is becoming visible or hidden on the page.",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.esm.js",
