@@ -1,4 +1,4 @@
-# React onScreen
+# React Visibility
 
 Detect when an element is becoming visible or hidden on the page.
 
@@ -6,15 +6,15 @@ Detect when an element is becoming visible or hidden on the page.
     <img src="react-onscreen.jpg"/>
 </div>
 
-![npm bundle size](https://img.shields.io/bundlephobia/min/reactjs-onscreen)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/reactjs-onscreen)
-[![npm downloads](https://img.shields.io/npm/dt/@kingrayhan/react-onscreen)](https://www.npmjs.com/package/reactjs-onscreen)
+![npm bundle size](https://img.shields.io/bundlephobia/min/reactjs-visibility)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/reactjs-visibility)
+[![npm downloads](https://img.shields.io/npm/dt/@kingrayhan/react-onscreen)](https://www.npmjs.com/package/reactjs-visibility)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
 
 ### Installation
 
 ```bash
-npm install reactjs-onscreen
+npm install reactjs-visibility
 ```
 
 > ⚠️ This plugin uses the Intersection Observer API that is not supported in every browser (currently supported in Edge, Firefox and Chrome). You need to include a polyfill to make it work on incompatible browsers.
@@ -25,7 +25,7 @@ npm install reactjs-onscreen
 
 ```jsx
 import React from "react";
-import { useOnScreen } from "reactjs-onscreen";
+import { useVisibility } from "reactjs-visibility";
 
 const App = () => {
   const handleChangeVisibility = (visible) => {
@@ -36,7 +36,7 @@ const App = () => {
 
   const options = {};
 
-  const { ref, visible } = useOnScreen({
+  const { ref, visible } = useVisibility({
     onChangeVisibility: handleChangeVisibility,
     options,
   });
@@ -62,10 +62,10 @@ const App = () => {
 
 ```jsx
 import React from "react";
-import { useOnScreen } from "reactjs-onscreen";
+import { useVisibility } from "reactjs-visibility";
 
 const App = () => {
-  const { ref, visible } = useOnScreen();
+  const { ref, visible } = useVisibility();
 
   useEffect(() => {
     if (visible) {
@@ -92,7 +92,7 @@ const App = () => {
 
 ```jsx
 import React from "react";
-import { useOnScreen } from "reactjs-onscreen";
+import { useOnScreen } from "reactjs-visibility";
 
 const App = () => {
   const handleChangeVisibility = (visible) => {
@@ -116,9 +116,9 @@ const App = () => {
         excepturi minima.
       </h1>
 
-      <Observer onChangeVisibility={handleOnScreen} options={options}>
+      <VisibilityObserver onChangeVisibility={handleOnScreen} options={options}>
         Loadmore...
-      </Observer>
+      </VisibilityObserver>
     </div>
   );
 };
