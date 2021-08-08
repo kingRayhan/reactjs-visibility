@@ -9,7 +9,7 @@ Detect when an element is becoming visible or hidden on the page.
 ![npm bundle size](https://img.shields.io/bundlephobia/min/reactjs-visibility)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/reactjs-visibility)
 [![npm downloads](https://img.shields.io/npm/dt/@kingrayhan/react-onscreen)](https://www.npmjs.com/package/reactjs-visibility)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kingrayhan/reactjs-visibility/blob/master/LICENSE)
 
 ### Installation
 
