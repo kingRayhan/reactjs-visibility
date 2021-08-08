@@ -1,5 +1,6 @@
 import React from "react";
-import { Observe, useOnScreen } from "../src/index";
+import useOnScreen from "../src/useOnScreen";
+import Observe from "../src/Observe";
 
 export default {
   title: "react-onscreend",

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-
 /*
 let options = {
   rootMargin: '0px',
