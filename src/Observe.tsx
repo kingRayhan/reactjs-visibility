@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
 import useOnScreen from "./useOnScreen";
 
-const Observe = ({ onScreen, options, children }) => {
-  const handleOnScreen = (visible) => {
+
+interface ObserveInterface{
+  onScreen: Function,
+  options: Object,
+  children: React.ReactChildren
+}
+
+
+const Observe = ({ onScreen, options, children }: ObserveInterface) => {
+  const handleOnScreen = (visible: boolean) => {
     onScreen(visible);
   };
 

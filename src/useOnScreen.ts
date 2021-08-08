@@ -1,16 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-/*
-let options = {
-  rootMargin: '0px',
-  threshold: 1.0
-}
-*/
 
-const useOnScreen = (onScreenCallback, options) => {
+const useOnScreen = (onScreenCallback: Function, options: Object) => {
   const ref = useRef();
   const [visible, setVisible] = useState(false);
 
-  const handleIntersectionObserver = ([entry]) => {
+  const handleIntersectionObserver: IntersectionObserverCallback = ([entry]) => {
     setVisible(entry.isIntersecting);
     if (entry.isIntersecting) {
       onScreenCallback(entry.isIntersecting);
@@ -23,10 +17,14 @@ const useOnScreen = (onScreenCallback, options) => {
       options
     );
 
-    if (ref.current) observer.observe(ref.current);
+    if (ref.current) {
+      // @ts-ignore
+      observer.observe(ref.current);
+    }
 
     return () => {
       if (ref.current) {
+        // @ts-ignore
         observer.unobserve(ref.current);
       }
     };
