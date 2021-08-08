@@ -5,8 +5,7 @@
 	"main": "src/index.js",
 	"scripts": {
 		"storybook": "start-storybook",
-		"build": "rollup -c",
-		"publish": "npm run build && npm publish --access public"
+		"publish": "npm publish --access public"
 	},
 	"keywords": [
 		"react",
