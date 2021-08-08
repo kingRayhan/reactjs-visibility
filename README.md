@@ -19,6 +19,43 @@ npm install reactjs-visibility
 
 > ⚠️ This plugin uses the Intersection Observer API that is not supported in every browser (currently supported in Edge, Firefox and Chrome). You need to include a polyfill to make it work on incompatible browsers.
 
+### Detech visibility with `<VisibilityObserver>` component
+
+```jsx
+import React from "react";
+import { VisibilityObserver } from "reactjs-visibility";
+
+const App = () => {
+  const handleChangeVisibility = (visible) => {
+    if (visible) {
+      alert("I am now visible");
+    }
+  };
+
+  const options = {
+    rootMargin: "200px",
+  };
+
+  return (
+    <div>
+      <h1 style={{ fontSize: 500 }}>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni nam
+        exercitationem sit alias perferendis, odit ex optio iure assumenda!
+        Voluptatum, nulla. Assumenda iusto nesciunt adipisci totam repellat id
+        excepturi minima.
+      </h1>
+
+      <VisibilityObserver
+        onChangeVisibility={handleChangeVisibility}
+        options={options}
+      >
+        Loadmore...
+      </VisibilityObserver>
+    </div>
+  );
+};
+```
+
 ### Detech visibility with `useVisibility()` Hook
 
 **Example 1**
@@ -83,42 +120,6 @@ const App = () => {
       </h1>
 
       <div ref={ref}>Loadmore...</div>
-    </div>
-  );
-};
-```
-
-### Detech visibility with `<VisibilityObserver>` component
-
-```jsx
-import React from "react";
-import { VisibilityObserver } from "reactjs-visibility";
-
-const App = () => {
-  const handleChangeVisibility = (visible) => {
-    if (visible) {
-      alert("I am now visible");
-    }
-  };
-
-  const options = {
-    rootMargin: "200px",
-  };
-
-  console.log(visible);
-
-  return (
-    <div>
-      <h1 style={{ fontSize: 500 }}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni nam
-        exercitationem sit alias perferendis, odit ex optio iure assumenda!
-        Voluptatum, nulla. Assumenda iusto nesciunt adipisci totam repellat id
-        excepturi minima.
-      </h1>
-
-      <VisibilityObserver onChangeVisibility={handleOnScreen} options={options}>
-        Loadmore...
-      </VisibilityObserver>
     </div>
   );
 };
