@@ -3,7 +3,7 @@
 Detect when an element is becoming visible or hidden on the page.
 
 <div align="center">
-    <img src="https://github.com/kingRayhan/react-onscreen/raw/main/react-onscreen.jpg"/>
+    <img src="https://github.com/kingRayhan/react-onscreen/blob/main/react-onscreen.jpg?raw=true"/>
 </div>
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@kingrayhan/react-onscreen)
