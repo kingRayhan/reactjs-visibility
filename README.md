@@ -14,14 +14,15 @@ npm install react-onscreen
 
 ```jsx
 import React from "react";
-import { useOnScreen } from "../src/index";
+import { useOnScreen } from "react-onscreen";
 
 const App = () => {
   const handleOnScreen = () => {
     alert("OnScreen");
   };
 
-  const { ref, visible } = useOnScreen(handleOnScreen);
+  const options = {};
+  const { ref, visible } = useOnScreen(handleOnScreen, options);
 
   console.log(visible);
 
@@ -39,6 +40,10 @@ const App = () => {
   );
 };
 ```
+
+## Options
+
+It's possible to pass the [IntersectionObserver `options` object](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#Parameters) using the `intersection`
 
 ### License
 
