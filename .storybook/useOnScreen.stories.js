@@ -10,9 +10,7 @@ export const HookDemo = () => {
     alert("you are on screen", visible);
   };
 
-  const { ref, visible } = useOnScreen(handleOnScreen, {
-    threshold: 0.5,
-  });
+  const { ref, visible } = useOnScreen(handleOnScreen);
 
   return (
     <div style={{ backgroundColor: visible ? "green" : "transparent" }}>
