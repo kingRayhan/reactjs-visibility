@@ -2,6 +2,11 @@
 
 Detect when an element is becoming visible or hidden on the page.
 
+![npm bundle size](https://img.shields.io/bundlephobia/min/@kingrayhan/react-onscreen)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@kingrayhan/react-onscreen)
+[![npm downloads](https://img.shields.io/npm/dt/@kingrayhan/react-onscreen)](https://www.npmjs.com/package/@kingrayhan/react-onscreen)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
+
 ### Installation
 
 ```bash
