@@ -19,7 +19,7 @@ npm install reactjs-visibility
 
 > ⚠️ This plugin uses the Intersection Observer API that is not supported in every browser (currently supported in Edge, Firefox and Chrome). You need to include a polyfill to make it work on incompatible browsers.
 
-### Detech visibility with `useOnScreen()` Hook
+### Detech visibility with `useVisibility()` Hook
 
 **Example 1**
 
