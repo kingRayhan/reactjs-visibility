@@ -1,12 +1,12 @@
 {
-	"name": "reactjs-onscreen",
-	"version": "0.0.10",
+	"name": "reactjs-visibility",
+	"version": "0.0.1",
 	"description": "Detect when an element is becoming visible or hidden on the page.",
 	"main": "dist/index.js",
 	"scripts": {
 		"storybook": "start-storybook",
 		"build": "tsdx build",
-		"publish": "npm publish --access public"
+		"publish": "npm run build && npm publish --access public"
 	},
 	"keywords": [
 		"react",
@@ -35,8 +35,5 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"tsdx": "^0.14.1"
-	},
-	"dependencies": {
-		"@babel/plugin-syntax-jsx": "^7.14.5"
 	}
 }

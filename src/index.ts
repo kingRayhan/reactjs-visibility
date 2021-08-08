@@ -1,2 +1,2 @@
-export {default as useOnScreen} from './useOnScreen'
-export {default as Observer} from './Observer'
+export {default as useVisibility} from './useVisibility'
+export {default as VisibilityObserver} from './VisibilityObserver'

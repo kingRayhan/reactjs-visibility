@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
 interface useOnScreenInterface {
-  onScreenCallback?: Function;
+  onChangeVisibility?: Function;
   options?: IntersectionObserverInit;
 }
 
-const useOnScreen = (args: useOnScreenInterface) => {
+const useVisibility = (args: useOnScreenInterface) => {
   const ref = useRef();
   const [visible, setVisible] = useState<Boolean>(false);
 
@@ -13,9 +13,11 @@ const useOnScreen = (args: useOnScreenInterface) => {
     entry,
   ]) => {
     setVisible(entry.isIntersecting);
-    if (entry.isIntersecting && args?.onScreenCallback) {
-      args.onScreenCallback(entry.isIntersecting);
+    
+    if (args?.onChangeVisibility) {
+      args.onChangeVisibility(entry.isIntersecting)
     }
+    
   };
 
   useEffect(() => {
@@ -37,4 +39,4 @@ const useOnScreen = (args: useOnScreenInterface) => {
   return { ref, visible };
 };
 
-export default useOnScreen;
+export default useVisibility;

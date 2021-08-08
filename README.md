@@ -21,23 +21,57 @@ npm install reactjs-onscreen
 
 ### Detech visibility with `useOnScreen()` Hook
 
+**Example 1**
+
 ```jsx
 import React from "react";
 import { useOnScreen } from "reactjs-onscreen";
 
 const App = () => {
-  const handleOnScreen = () => {
-    alert("OnScreen");
+  const handleChangeVisibility = (visible) => {
+    if (visible) {
+      alert("I am now visible");
+    }
   };
 
   const options = {};
 
   const { ref, visible } = useOnScreen({
-    onScreenCallback: handleOnScreen,
+    onChangeVisibility: handleChangeVisibility,
     options,
   });
 
   console.log(visible);
+
+  return (
+    <div>
+      <h1 style={{ fontSize: 50 }}>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni nam
+        exercitationem sit alias perferendis, odit ex optio iure assumenda!
+        Voluptatum, nulla. Assumenda iusto nesciunt adipisci totam repellat id
+        excepturi minima.
+      </h1>
+
+      <div ref={ref}>Loadmore...</div>
+    </div>
+  );
+};
+```
+
+**Example 2**
+
+```jsx
+import React from "react";
+import { useOnScreen } from "reactjs-onscreen";
+
+const App = () => {
+  const { ref, visible } = useOnScreen();
+
+  useEffect(() => {
+    if (visible) {
+      alert("I am now visible");
+    }
+  }, [visible]);
 
   return (
     <div>
@@ -61,8 +95,10 @@ import React from "react";
 import { useOnScreen } from "reactjs-onscreen";
 
 const App = () => {
-  const handleOnScreen = () => {
-    alert("OnScreen");
+  const handleChangeVisibility = (visible) => {
+    if (visible) {
+      alert("I am now visible");
+    }
   };
 
   const options = {
@@ -80,7 +116,7 @@ const App = () => {
         excepturi minima.
       </h1>
 
-      <Observer onScreen={handleOnScreen} options={options}>
+      <Observer onChangeVisibility={handleOnScreen} options={options}>
         Loadmore...
       </Observer>
     </div>

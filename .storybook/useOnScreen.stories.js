@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useOnScreen, Observer } from "../src/index";
+import { useVisibility, VisibilityObserver } from "../src/index";
 
 export default {
   title: "reactjs-onscreen",
 };
 
 export const HookDemo = () => {
-  const { ref, visible } = useOnScreen();
+  const { ref, visible } = useVisibility({});
 
   return (
     <div style={{ width: 640, margin: "auto" }}>
@@ -177,10 +177,6 @@ export const HookDemo = () => {
 export const ComponentDemo = () => {
   const [visible, setVisible] = useState(false);
 
-  const handleOnScreen = (p) => {
-    console.log(p);
-  };
-
   return (
     <div style={{ width: 640, margin: "auto" }}>
       <header
@@ -305,12 +301,11 @@ export const ComponentDemo = () => {
         from the Roman philosopher Cicero.
       </p>
 
-      <Observer
-        onScreen={handleOnScreen}
-        style={{ backgroundColor: "gold", width: "100%" }}
-      >
-        <h1>Hey I am here</h1>
-      </Observer>
+      <VisibilityObserver onChangeVisibility={setVisible}>
+        <div style={{ backgroundColor: "gold", width: "100%" }}>
+          <h1>Hey I am here</h1>
+        </div>
+      </VisibilityObserver>
 
       <p>
         The purpose of lorem ipsum is to create a natural looking block of text
