@@ -14,7 +14,7 @@ Detect when an element is becoming visible or hidden on the page.
 ### Installation
 
 ```bash
-npm install react-onscreen
+npm install reactjs-onscreen
 ```
 
 > ⚠️ This plugin uses the Intersection Observer API that is not supported in every browser (currently supported in Edge, Firefox and Chrome). You need to include a polyfill to make it work on incompatible browsers.
@@ -23,7 +23,7 @@ npm install react-onscreen
 
 ```jsx
 import React from "react";
-import { useOnScreen } from "react-onscreen";
+import { useOnScreen } from "reactjs-onscreen";
 
 const App = () => {
   const handleOnScreen = () => {
