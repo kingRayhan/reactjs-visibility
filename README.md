@@ -92,7 +92,7 @@ const App = () => {
 
 ```jsx
 import React from "react";
-import { useOnScreen } from "reactjs-visibility";
+import { VisibilityObserver } from "reactjs-visibility";
 
 const App = () => {
   const handleChangeVisibility = (visible) => {
