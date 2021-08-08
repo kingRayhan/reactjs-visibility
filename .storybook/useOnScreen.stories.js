@@ -1,14 +1,13 @@
 import React from "react";
 import useOnScreen from "../src/useOnScreen";
-import Observe from "../src/Observe";
 
 export default {
-  title: "react-onscreend",
+  title: "reactjs-onscreend",
 };
 
 export const HookDemo = () => {
   const handleOnScreen = (visible) => {
-    alert("you are on screen");
+    alert("you are on screen", visible);
   };
 
   const { ref, visible } = useOnScreen(handleOnScreen, {
@@ -61,56 +60,6 @@ export const HookDemo = () => {
       <div ref={ref} style={{ backgroundColor: "green", height: "50vh" }}>
         <h1>Observe me</h1>
       </div>
-    </div>
-  );
-};
-
-export const ComponentDemo = () => {
-  return (
-    <div>
-      <h1>
-        Boilerplate code for a simple, lightweight and performant react npm
-        package. You can read a step-by-step guide of how to create your own
-        package here.Boilerplate code for a simple, lightweight and performant
-        react npm package. You can read a step-by-step guide of how to create
-        your own package here.Boilerplate code for a simple, lightweight and
-        performant react npm package. You can read a step-by-step guide of how
-        to create your own package here.Boilerplate code for a simple,
-        lightweight and performant react npm package. You can read a
-        step-by-step guide of how to create your own package here.Boilerplate
-        code for a simple, lightweight and performant react npm package. You can
-        read a step-by-step guide of how to create your own package
-        here.Boilerplate code for a simple, lightweight and performant react npm
-        package. You can read a step-by-step guide of how to create your own
-        package here.Boilerplate code for a simple, lightweight and performant
-        react npm package. You can read a step-by-step guide of how to create
-        your own package here.Boilerplate code for a simple, lightweight and
-        performant react npm package. You can read a step-by-step guide of how
-        to create your own package here.Boilerplate code for a simple,
-        lightweight and performant react npm package. You can read a
-        step-by-step guide of how to create your own package here.Boilerplate
-        code for a simple, lightweight and performant react npm package. You can
-        read a step-by-step guide of how to create your own package
-        here.Boilerplate code for a simple, lightweight and performant react npm
-        package. You can read a step-by-step guide of how to create your own
-        package here.Boilerplate code for a simple, lightweight and performant
-        react npm package. You can read a step-by-step guide of how to create
-        your own package here.Boilerplate code for a simple, lightweight and
-        performant react npm package. You can read a step-by-step guide of how
-        to create your own package here.Boilerplate code for a simple,
-        lightweight and performant react npm package. You can read a
-        step-by-step guide of how to create your own package here.Boilerplate
-        code for a simple, lightweight and performant react npm package. You can
-        read a step-by-step guide of how to create your own package
-        here.Boilerplate code for a simple, lightweight and performant react npm
-        package. You can read a step-by-step guide of how to create your own
-        package here.Boilerplate code for a simple, lightweight and performant
-        react npm package. You can read a step-by-step guide of how to create
-        your own
-      </h1>
-      <Observe onScreen={() => alert("On screen")} options={{ threshold: 1 }}>
-        <h1>Loading....</h1>
-      </Observe>
     </div>
   );
 };
