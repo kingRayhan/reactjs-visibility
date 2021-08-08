@@ -2,6 +2,10 @@
 
 Detect when an element is becoming visible or hidden on the page.
 
+<div align="center">
+    <img src="./react-onscreen.jpg"/>
+</div>
+
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@kingrayhan/react-onscreen)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@kingrayhan/react-onscreen)
 [![npm downloads](https://img.shields.io/npm/dt/@kingrayhan/react-onscreen)](https://www.npmjs.com/package/@kingrayhan/react-onscreen)
