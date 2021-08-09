@@ -20,21 +20,16 @@
 		"email": "md.raihan095@northsouth.edu",
 		"url": "https://www.github.com/kingrayhan"
 	},
-	"repository": "kingRayhan/reactjs-onscreen",
+	"repository": "kingRayhan/reactjs-visibility",
 	"license": "MIT",
 	"peerDependencies": {
 		"react": ">=16",
 		"react-dom": ">=16"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.13.16",
-		"@babel/preset-env": "^7.13.15",
-		"@babel/preset-react": "^7.13.13",
 		"@storybook/react": "^6.3.6",
 		"@types/react": "^17.0.16",
 		"@types/react-dom": "^17.0.9",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
 		"tsdx": "^0.14.1"
 	}
 }
