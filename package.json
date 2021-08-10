@@ -6,14 +6,13 @@
 	"scripts": {
 		"storybook": "start-storybook",
 		"build": "tsdx build",
-		"prepare": "npm run build",
 		"publish": "npm run build && npm publish --access public"
 	},
 	"keywords": [
 		"react",
 		"storybook",
-		"onscreen",
-		"use-onscreen"
+		"react-visibility",
+		"intersaction-observer"
 	],
 	"author": {
 		"name": "King Rayhan",
