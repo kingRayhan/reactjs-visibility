@@ -6,7 +6,7 @@
 	"scripts": {
 		"storybook": "start-storybook",
 		"build": "tsdx build",
-		"test": "echo \"Error: no test specified\"",
+		"test": "node test.js",
 		"publish": "npm run build && npm publish --access public"
 	},
 	"keywords": [
