@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 interface useOnScreenInterface {
-  onChangeVisibility?: Function;
+  onChangeVisibility?: (visibility: boolean) => void;
   options?: IntersectionObserverInit;
 }
 
@@ -13,15 +13,17 @@ const useVisibility = (args: useOnScreenInterface) => {
     entry,
   ]) => {
     setVisible(entry.isIntersecting);
-    
+
     if (args?.onChangeVisibility) {
-      args.onChangeVisibility(entry.isIntersecting)
+      args.onChangeVisibility(entry.isIntersecting);
     }
-    
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersectionObserver, args?.options);
+    const observer = new IntersectionObserver(
+      handleIntersectionObserver,
+      args?.options
+    );
 
     if (ref.current) {
       // @ts-ignore

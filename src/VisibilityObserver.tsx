@@ -2,10 +2,9 @@ import React from "react";
 import useVisibility from "./useVisibility";
 
 interface ObserverVisibilityComponentInterface {
-  onChangeVisibility: Function;
-  options: IntersectionObserverInit;
-  visible: Boolean;
-  children: React.ReactChildren;
+  onChangeVisibility: (visibility: boolean) => void;
+  options?: IntersectionObserverInit;
+  children?: JSX.Element | JSX.Element[];
 }
 
 const VisibilityObserver = (props: ObserverVisibilityComponentInterface) => {
@@ -17,14 +16,12 @@ const VisibilityObserver = (props: ObserverVisibilityComponentInterface) => {
 
   const { ref } = useVisibility({
     options: props.options,
-    onChangeVisibility: handleOnScreen
+    onChangeVisibility: handleOnScreen,
   });
 
   return (
     // @ts-ignore
-    <section ref={ref}>
-      {props.children}
-    </section>
+    <section ref={ref}>{props.children}</section>
   );
 };
 
