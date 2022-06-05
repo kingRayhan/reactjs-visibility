@@ -5,19 +5,17 @@ on:
     types: [published]
 
 jobs:
-  release:
-    name: 🚀 release
+  publish-npm:
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: 📚 checkout
-        uses: actions/checkout@v2.1.1
-      - name: 🟢 node
-        uses: actions/setup-node@v1.4.2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org
-      - name: 🚀 publish
-        run: npm publish --access public
-        working-directory: .
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm build
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
