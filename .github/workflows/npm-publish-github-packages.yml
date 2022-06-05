@@ -5,18 +5,15 @@ on:
     types: [published]
 
 jobs:
-  publish-npm:
-    needs: build
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          working-directory: ./
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - run: npm build
-      - run: npm publish
+          node-version: 14
+      - run: npm install
+      - run: npm run build
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{secrets.NPM_AUTH_TOKEN}}
