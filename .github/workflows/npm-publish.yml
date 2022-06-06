@@ -2,10 +2,10 @@ name: Publish to NPM
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
-  build:
+  npm_publish:
     runs-on: ubuntu-20.04
     steps:
       - name: 📚 Checkout
@@ -13,7 +13,7 @@ jobs:
       - name: 🟢 Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: "14.x"
+          node-version: 14
           registry-url: "https://registry.npmjs.org"
       - name: 🔧 Install dependencies and build
         run: npm install && npm run build
