@@ -5,7 +5,9 @@ Detect when an element is becoming visible or hidden on the page.
 <div align="center">
     <img src="react-visibility.jpg"/>
 </div>
+
 [![GitHub Pages deploy](https://github.com/kingRayhan/reactjs-visibility/actions/workflows/gh-pages-publish.yml/badge.svg)](https://github.com/kingRayhan/reactjs-visibility/actions/workflows/gh-pages-publish.yml)
+[![Publish to NPM](https://github.com/kingRayhan/reactjs-visibility/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/kingRayhan/reactjs-visibility/actions/workflows/npm-publish.yml)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/reactjs-visibility)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/reactjs-visibility)
