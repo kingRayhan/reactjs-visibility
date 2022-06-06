@@ -1,5 +1,7 @@
 import { useState } from "react";
+import classNames from "classnames";
 import { useVisibility, VisibilityObserver } from "../src/index";
+import "./preview.css";
 
 export default {
   title: "reactjs-onscreen",
@@ -7,23 +9,10 @@ export default {
 
 export const HookDemo = () => {
   const { ref, visible } = useVisibility({});
-
   return (
-    <div style={{ width: 640, margin: "auto" }}>
+    <div className="container">
       <header
-        style={{
-          backgroundColor: visible ? "green" : "tomato",
-          width: "100%",
-          color: "#fff",
-          padding: "3px 10px",
-          position: "sticky",
-          top: 0,
-          left: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          fontFamily: "monospace",
-        }}
+        className={classNames("header", { "header--sensor-visible": visible })}
       >
         <h1>useOnScreen()</h1>
 
@@ -178,21 +167,9 @@ export const ComponentDemo = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div style={{ width: 640, margin: "auto" }}>
+    <div className="container">
       <header
-        style={{
-          backgroundColor: visible ? "green" : "tomato",
-          width: "100%",
-          color: "#fff",
-          padding: "3px 10px",
-          position: "sticky",
-          top: 0,
-          left: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          fontFamily: "monospace",
-        }}
+        className={classNames("header", { "header--sensor-visible": visible })}
       >
         <h1>{"<Observer />"}</h1>
 

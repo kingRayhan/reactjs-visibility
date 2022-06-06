@@ -11,13 +11,20 @@
 	},
 	"keywords": [
 		"react",
-		"storybook",
 		"react-visibility",
-		"intersaction-observer"
+		"visibility",
+		"visibility-sensor",
+		"visibility-sensor-react",
+		"visibility-sensor-react-native",
+		"intersaction-observer",
+		"interaction-observer",
+		"interaction-observer-react",
+		"interaction-observer-react-native",
+		"interaction-observer-react-native-web"
 	],
 	"author": {
 		"name": "King Rayhan",
-		"email": "md.raihan095@northsouth.edu",
+		"email": "rayhan.dev.bd@gmail.com",
 		"url": "https://www.github.com/kingrayhan"
 	},
 	"repository": "kingRayhan/reactjs-visibility",
@@ -30,6 +37,7 @@
 		"@storybook/react": "^6.3.6",
 		"@types/react": "^17.0.16",
 		"@types/react-dom": "^17.0.9",
+		"classnames": "^2.3.1",
 		"tsdx": "^0.13.3"
 	}
 }
