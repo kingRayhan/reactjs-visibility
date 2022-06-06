@@ -1,5 +1,6 @@
 # Folders
 node_modules
+package-lock.json
 .storybook
 src
 /storybook-static
