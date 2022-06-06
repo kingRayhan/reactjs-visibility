@@ -1,5 +1,6 @@
 # Folders
-node_modules
-dist
+/node_modules
+/storybook-static
+/dist
 # Output of 'npm pack'
 *.tgz
