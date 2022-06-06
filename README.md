@@ -11,6 +11,8 @@ Detect when an element is becoming visible or hidden on the page.
 [![npm downloads](https://img.shields.io/npm/dt/@kingrayhan/react-onscreen)](https://www.npmjs.com/package/reactjs-visibility)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kingrayhan/reactjs-visibility/blob/master/LICENSE)
 
+## [See in action](https://kingrayhan.github.io/reactjs-visibility/)
+
 ### Installation
 
 ```bash
