@@ -15,6 +15,7 @@ export const HookDemo = () => {
         className={classNames("header", { "header--sensor-visible": visible })}
       >
         <h1>useOnScreen()</h1>
+        {visible && <p>The sensor is visible</p>}
 
         <p>Scroll down</p>
       </header>

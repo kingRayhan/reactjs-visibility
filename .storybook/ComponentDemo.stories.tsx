@@ -15,7 +15,7 @@ export const ComponentDemo = () => {
         className={classNames("header", { "header--sensor-visible": visible })}
       >
         <h1>{"<Observer />"}</h1>
-
+        {visible && <p>The sensor is visible</p>}
         <p>Scroll down</p>
       </header>
       <p>
