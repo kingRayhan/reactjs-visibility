@@ -1,6 +1,6 @@
 {
   "name": "reactjs-visibility",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Detect when an element is becoming visible or hidden on the page.",
   "main": "dist/index.js",
   "scripts": {
