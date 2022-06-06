@@ -4,11 +4,11 @@
   "description": "Detect when an element is becoming visible or hidden on the page.",
   "main": "dist/index.js",
   "scripts": {
-    "storybook": "start-storybook",
     "build": "tsdx build",
-    "test": "node test.js",
     "publish": "npm publish --access public",
-    "semantic-release": "semantic-release"
+    "release": "semantic-release",
+    "dev:storybook": "start-storybook",
+    "build:storybook": "build-storybook"
   },
   "keywords": [
     "react",
@@ -41,5 +41,10 @@
     "classnames": "^2.3.1",
     "tsdx": "^0.13.3",
     "semantic-release": "^19.0.2"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
