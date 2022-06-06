@@ -19,6 +19,6 @@ jobs:
       - name: 🔧 Install dependencies and build
         run: npm install && npm run build
       - name: 📦 Publish package on NPM
-        run: npm publish --access public
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

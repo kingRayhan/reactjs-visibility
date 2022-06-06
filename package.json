@@ -7,7 +7,7 @@
     "storybook": "start-storybook",
     "build": "tsdx build",
     "test": "node test.js",
-    "publish": "npm run build && npm publish --access public",
+    "publish": "npm publish --access public",
     "semantic-release": "semantic-release"
   },
   "keywords": [
