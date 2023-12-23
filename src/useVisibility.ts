@@ -5,7 +5,12 @@ interface useOnScreenInterface {
   options?: IntersectionObserverInit;
 }
 
-const useVisibility = (args: useOnScreenInterface) => {
+interface useVisibilityReturnType {
+  ref: React.MutableRefObject<any>;
+  visible: Boolean;
+}
+
+const useVisibility = (args: useOnScreenInterface): useVisibilityReturnType => {
   const ref = useRef();
   const [visible, setVisible] = useState<Boolean>(false);
 
